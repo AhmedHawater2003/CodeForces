@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
-public class One2{
+// O(2n)
+public class Boy_or_Girl{
     public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
@@ -19,12 +20,12 @@ public class One2{
         for(int i = 0; i< l-1; i ++){
             if( arr[i] != arr[i+1]){ans++;}
         }
-        ans ++ ;//to count last letter
+        ans ++ ; //to count last letter
         System.out.println((ans%2 == 0)?"CHAT WITH HER!":"IGNORE HIM!"); 
         }
     }
 }
-
+// better time complixity -- O(n+26) -- can be achieved using small characters boolean distinct array 
 
 class Scanner 
     {
