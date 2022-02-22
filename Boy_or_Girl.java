@@ -21,7 +21,6 @@ public class One2{
         }
         ans ++ ;//to count last letter
         System.out.println((ans%2 == 0)?"CHAT WITH HER!":"IGNORE HIM!"); 
-        System.out.println(ans);     
         }
     }
 }
