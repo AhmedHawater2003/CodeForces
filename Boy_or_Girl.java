@@ -1,27 +1,28 @@
 import java.util.*;
 import java.io.*;
-public class Boy_or_Girl{
+public class One2{
     public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         int l = s.length();
+        if(l ==1){
+            System.out.print("IGNORE HIM!");
+        }
+        else
+        {
         char[] arr = new char[l];
         for(int i =0; i<l; i++ ){
             arr[i] = s.charAt(i);
         }
         Arrays.sort(arr);
-        int c = 1;
-        String test= "";
+        int ans = 0;
         for(int i = 0; i< l-1; i ++){
-            if( arr[i] != arr[i+1]){
-                if(c ==1){test += arr[i];}
-                else{c = 1;}
-            }
-            else {c ++;}
+            if( arr[i] != arr[i+1]){ans++;}
         }
-        int res = test.length();
-        if(c == 1){res ++;}
-        System.out.print((res%2 == 0)?"CHAT WITH HER!":"IGNORE HIM!");        
+        ans ++ ;//to count last letter
+        System.out.println((ans%2 == 0)?"CHAT WITH HER!":"IGNORE HIM!"); 
+        System.out.println(ans);     
+        }
     }
 }
 
